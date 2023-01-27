@@ -148,7 +148,7 @@ In the Excel Menu/Ribbon, choose "Data" > "Get Data" > "From Other Sources" > "F
 
 ![Excel DSN](images/excel_odbc_dsn.png)
 
-If all steps were performed correctly, the "Navigator" window within Exel should populate with a tree-view of Snowflake database objects.
+If all steps were performed correctly, the "Navigator" window within Excel should populate with a tree-view of Snowflake database objects.
 
 ![Excel Navigator](images/excel_dsn_nav.png)
 
