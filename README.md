@@ -59,7 +59,7 @@ End Class
 ```
 
 ### Generating a New Token
-The code snipped below presents a framework for generating a new token.  The values for the URLs and values in the Key-Value Pairs will differ for your own implementation.
+The code snippet below presents a framework for generating a new token.  The values for the URLs and values in the Key-Value Pairs will differ for your own implementation.
 ```vb
     Private Function GenerateToken() As String
 
@@ -139,7 +139,7 @@ Each token contains an `expires_in` value which indicates when the token will ex
 
 The code excerpts above are the essentials of what is needed to generate a new token, read from the System Registry, and write to the System Registry.  This code should be modified and augmented to fit your own use case and implementation.  For example, in a Windows service code base, a looping mechanism will be needed along with other Windows Service constructs and the Windows Service framework for managing the service.
 
-## Step #6 Testing 
+## Step #5 Testing 
 
 ### Using Microsoft Excel
 Microsoft Excel is pehaps the simplest and most ubiquitous application that can be used to ensure that the ODBC entry created in the previous steps with a refreshing token is actually functional.
@@ -164,7 +164,7 @@ Within the "Provider options" pane, ensure that the checkboxes are checked for t
 
 Next, create a new liked server by right-clicking on the "Linked Servers" node with the "Object Explorer" and select "New Linked Server..." from the context menu.
 
-In the "New Linked Server" windows, provide a name for the linked server in the "Linked server" field.  Choose "Microsoft OLE DB Provider for ODBC" for the "Provider" drop-down field.  Enter "Snowflake" DSN or the name of the DSN created in Step #2 for the "Product name" and "Data source" fields.
+In the "New Linked Server" window, provide a name for the linked server in the "Linked server" field.  Choose "Microsoft OLE DB Provider for ODBC" for the "Provider" drop-down field.  Enter "Snowflake" DSN or the name of the DSN created in Step #2 for the "Product name" and "Data source" fields.
 
 In the navigation pane on the left of this window, the "Security" option should be selected and configured according to your desired settings.  Click "OK" to complete the creation of the linked server.
 
