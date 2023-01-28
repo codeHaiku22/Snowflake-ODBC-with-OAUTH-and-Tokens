@@ -6,7 +6,7 @@ January 27, 2023
 ***
 
 ## Overview
-The Snowflake data repositories can be secured in multiple ways to protect information and limit access.  One common and standard method of connectivity that is utilized by many systems is Open Database Connectivity (ODBC).  ODBC allows for multiple applications, services, and tools to connect to a database using an ODBC entry that has been created on a machine with a Microsoft Windows operating system.  However, this method of connectivity can become complicated when OAUTH methods are used, especially with tokens that are set to expire.  
+The Snowflake data repositories can be secured in multiple ways to protect information and limit access.  One common and standard method of connectivity that is utilized by many systems is Open Database Connectivity (ODBC).  ODBC allows for multiple applications, services, and tools to connect to a database using an ODBC entry that has been created on a machine with a Microsoft Windows operating system.  This method of connectivity can become complicated when OAUTH methods are used, especially with tokens that are set to expire.  
 
 This document will provide some instructions on how you can setup a Windows system to connect to Snowflake repositories using OAUTH and expiring tokens.  The code presented in this document should be placed into a Windows Service, Scheduled Task, or SQL Server Agent Job to ensure that it executes and generates a new token prior to the expiration of the existing token.  New tokens can be generated at any time and should be generated with a buffer of time before the expiration of the existing token.
 
@@ -137,7 +137,7 @@ Each token contains an `expires_in` value which indicates when the token will ex
     End Function    
 ```
 
-The code excerpts above are the essentials of what is needed to generate a new token, read from the System Registry, and write to the System Registry.  This code should be modified and augmented to fit your own use case and implementation.  For example, in a Windows service code base, a looping mechanism will be needed along with other Windows Service constructs and the Windows Service framework for managing the service.
+The code excerpts above are the essentials of what is needed to generate a new token, read from the System Registry, and write to the System Registry.  This code should be modified and augmented to fit your own use case and implementation.  For example, in a Windows Service code base, a looping mechanism will be needed along with other Windows Service constructs and the Windows Service framework for managing the service.
 
 ## Step #5 Testing 
 
@@ -155,14 +155,15 @@ If all steps were performed correctly, the "Navigator" window within Excel shoul
 ### Using SQL Server
 One of the greatest benefits of having an ODBC entry for Snowflake is the ability to create a linked server within SQL Server.  In order to create a linked server, some settings should be configured.
 
-#### Configure MSOLEDBSQL Provider
+#### Configure the MSOLEDBSQL Provider
 Within SQL Server Management Studio, use the "Object Explorer" to navigate to "Server Objects" > "Linked Servers" > "Providers" and expand the "Providers" node.  Right-click the "MSOLEDBSQL" provider and select "Properties" from the context menu.
 
 Within the "Provider options" pane, ensure that the checkboxes are checked for the following settings: "Nested queries", "Level zero only", "Allow inprocess", and "Supports 'Like' Operator".  Click the "OK" button.
 
 ![MSOLEDB Configuration](images/ss_driver_settings.png)
 
-Next, create a new liked server by right-clicking on the "Linked Servers" node with the "Object Explorer" and select "New Linked Server..." from the context menu.
+### Create a Linked Server
+Next, create a new linked server by right-clicking on the "Linked Servers" node with the "Object Explorer" and select "New Linked Server..." from the context menu.
 
 In the "New Linked Server" window, provide a name for the linked server in the "Linked server" field.  Choose "Microsoft OLE DB Provider for ODBC" for the "Provider" drop-down field.  Enter "Snowflake" DSN or the name of the DSN created in Step #2 for the "Product name" and "Data source" fields.
 
