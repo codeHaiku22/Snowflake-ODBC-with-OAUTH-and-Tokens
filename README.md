@@ -162,7 +162,7 @@ Within the "Provider options" pane, ensure that the checkboxes are checked for t
 
 ![MSOLEDB Configuration](images/ss_driver_settings.png)
 
-### Create a Linked Server
+#### Create a Linked Server
 Next, create a new linked server by right-clicking on the "Linked Servers" node with the "Object Explorer" and select "New Linked Server..." from the context menu.
 
 In the "New Linked Server" window, provide a name for the linked server in the "Linked server" field.  Choose "Microsoft OLE DB Provider for ODBC" for the "Provider" drop-down field.  Enter "Snowflake" DSN or the name of the DSN created in Step #2 for the "Product name" and "Data source" fields.
