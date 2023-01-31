@@ -110,12 +110,12 @@ The code snippet below presents a framework for generating a new token.  There a
 `...`<br/>
 `Dim strURL as String = "https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token`<br/>
 `...`<br/>
-     `.Add(New KeyValuePair(Of String, String)("client_id", "{clientId}"))`<br/>
-     `.Add(New KeyValuePair(Of String, String)("client_secret", "{secret}))`<br/>
-     `...`<br/>
-     `.Add(New KeyValuePair(Of String, String)("username", "{emailAddress}"))`<br/>
-     `.Add(New KeyValuePair(Of String, String)("password", "{password}"))`<br/>
-     `.Add(New KeyValuePair(Of String, String)("scope", "https://{scope}/session:role-any"))`<br/>
+`    .Add(New KeyValuePair(Of String, String)("client_id", "{clientId}"))`<br/>
+`    .Add(New KeyValuePair(Of String, String)("client_secret", "{secret}"))`<br/>
+`    ...`<br/>
+`    .Add(New KeyValuePair(Of String, String)("username", "{emailAddress}"))`<br/>
+`    .Add(New KeyValuePair(Of String, String)("password", "{password}"))`<br/>
+`    .Add(New KeyValuePair(Of String, String)("scope", "https://{scope}/session:role-any"))`<br/>
 `...`<br/>
 
 ### Reading an Existing Token Value from Windows System Registry
