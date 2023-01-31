@@ -58,6 +58,14 @@ Public Class AzureToken
 End Class
 ```
 
+### Importing Needed Libraries
+In order to generate a token, the following imports will facilitate the `GenerateToken()` function presented in the next section of this step.
+
+```vb
+Imports System.Net.Http
+Imports System.Text.Json
+```
+
 ### Generating a New Token
 The code snippet below presents a framework for generating a new token.  The values for the URLs and values in the Key-Value Pairs will differ for your own implementation.
 ```vb
