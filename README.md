@@ -106,6 +106,7 @@ The code snippet below presents a framework for generating a new token.  There a
 ```
 
 > ***Note: Provide your own URLs and values in the Key-Value Pairs to generate a token that is specific for your project.***
+
 `...`<br/>
 `Dim strURL as String = "https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token`<br/>
 `...`<br/>
