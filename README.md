@@ -104,7 +104,9 @@ The code snippet below presents a framework for generating a new token.  There a
 
     End Function
 ```
+
 <br/>
+
 > ***Note:*** In the code above, provide your own URLs and values in the Key-Value Pairs to generate a token that is specific for your project.
 > 
 > ```
