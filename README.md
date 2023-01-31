@@ -68,19 +68,6 @@ Imports System.Text.Json
 
 ### Generating a New Token
 The code snippet below presents a framework for generating a new token.  There are many variable values which will differ based on your own implementaton.    
-
-> ***Note: Provide your own URLs and values in the Key-Value Pairs to generate a token that is specific for your project.***
-> `...`
-> `Dim strURL as String = "https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token`
-> `...`
->      `.Add(New KeyValuePair(Of String, String)("client_id", "{clientId}"))`
->      `.Add(New KeyValuePair(Of String, String)("client_secret", "{secret}))`
->      ...
->      `.Add(New KeyValuePair(Of String, String)("username", "{emailAddress}"))`
->      `.Add(New KeyValuePair(Of String, String)("password", "{password}"))`
->      `.Add(New KeyValuePair(Of String, String)("scope", "https://{scope}/session:role-any"))`
-> `...`
-
 ```vb
     Private Function GenerateToken() As String
 
@@ -118,7 +105,17 @@ The code snippet below presents a framework for generating a new token.  There a
     End Function
 ```
 
-
+> ***Note: Provide your own URLs and values in the Key-Value Pairs to generate a token that is specific for your project.***
+`...`<br/>
+`Dim strURL as String = "https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token`<br/>
+`...`<br/>
+     `.Add(New KeyValuePair(Of String, String)("client_id", "{clientId}"))`<br/>
+     `.Add(New KeyValuePair(Of String, String)("client_secret", "{secret}))`<br/>
+     `...`<br/>
+     `.Add(New KeyValuePair(Of String, String)("username", "{emailAddress}"))`<br/>
+     `.Add(New KeyValuePair(Of String, String)("password", "{password}"))`<br/>
+     `.Add(New KeyValuePair(Of String, String)("scope", "https://{scope}/session:role-any"))`<br/>
+`...`<br/>
 
 ### Reading an Existing Token Value from Windows System Registry
 Reading an existing token value from the System Registry is useful functionality and should be considered in the design of your code base.  It allows for a check/confirmation of a write to the System Registry.
