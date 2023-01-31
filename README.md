@@ -49,7 +49,7 @@ Within this code base, the token is going to be treated as an object that is ins
 ```vb
 Public Class AzureToken
 
-    Public Property token_type As ***String***
+    Public Property token_type As String
     Public Property scope As String
     Public Property expires_in As Integer
     Public Property ext_expires_in As Integer
@@ -67,7 +67,10 @@ Imports System.Text.Json
 ```
 
 ### Generating a New Token
-The code snippet below presents a framework for generating a new token.  The values for the URLs and values in the Key-Value Pairs will differ for your own implementation.
+The code snippet below presents a framework for generating a new token.  There are many variable values which will differ based on your own implementaton.    
+
+> Provide your own URLs and values in the Key-Value Pairs to generate a token that is specific for your project.
+
 ```vb
     Private Function GenerateToken() As String
 
@@ -104,6 +107,8 @@ The code snippet below presents a framework for generating a new token.  The val
 
     End Function
 ```
+
+
 
 ### Reading an Existing Token Value from Windows System Registry
 Reading an existing token value from the System Registry is useful functionality and should be considered in the design of your code base.  It allows for a check/confirmation of a write to the System Registry.
