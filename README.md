@@ -92,7 +92,7 @@ The code snippet below presents a framework for generating a new token.  There a
                 tkn = JsonSerializer.Deserialize(Of AzureToken)(strResponse)
             End Using
             If tkn IsNot Nothing And tkn.access_token IsNot Nothing Then
-                GenerateToken = System.Web.HttpUtility.UrlEncode(tkn.access_token)
+                GenerateToken = tkn.access_token
             Else
                 GenerateToken = ""
             End If
