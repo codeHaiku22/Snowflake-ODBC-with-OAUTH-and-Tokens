@@ -17,6 +17,10 @@ Snowflake provides for the download of their ODBC driver.  The latest version of
 
 <br/>
 
+> ***Note:*** To obtain the 32-bit ODBC driver, the latest version of this driver can be obtained from their website by clicking on this [link](https://sfc-repo.snowflakecomputing.com/odbc/win32/latest/index.html)
+
+<br/>
+
 ## Step #2 Create a New System Data Source Name (DSN)
 Create a new ODBC entry by clicking the "Start" button, typing in the word `run` and pressing `Enter`.  In the "Run" window, type `odbcad32.exe` and press `Enter` to launch the "ODBC Data Source Administrator".  Then, click on the "System DSN" tab and click the "Add..." button.
 
@@ -31,14 +35,20 @@ The ODBC entry is named "Snowflake" and is configured as shown below.  For your 
 
 <br/>
 
+> ***Note:*** For the creation of 32-bit ODBC drivers, the "ODBC Data Source Administrator" can be launched using the executable at the following path `C:\Windows\syswow64\odbcad32.exe`.
+
+<br/>
+
 ## Step #3 Modify the Windows System Registry 
 The Windows System Registry stores the System DSN along with its configuration parameters.  Modify the Windows System Registry entry for the ODBC entry created in the previous step by clicking the "Start" button, typing in the word `run` and pressing `Enter`.  In the "Run" window, type `regedit.exe` and press `Enter` to launch the "Registry Editor".
 
 Navigate to the registry entry for the newly created ODBC entry using the following path: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI\Snowflake`.  Then, right-click to launch the context menu and select "New" > "String Value".  Name the new value "token" and press `Enter`.  
 
-> ***Note:*** For 32-bit ODBC drivers, the registry entry for the newly created ODBC entry will be found at the following path `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Nodes\ODBC\ODBC.INI\Snowflake`
-
 ![System Registry Parameters](images/registry.png)
+
+<br/>
+
+> ***Note:*** For 32-bit ODBC drivers, the registry entry for the newly created ODBC entry will be found at the following path `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Nodes\ODBC\ODBC.INI\Snowflake`
 
 <br/>
 
