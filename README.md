@@ -204,12 +204,12 @@ Next, create a new linked server by right-clicking on the "Linked Servers" node 
 
 In the "New Linked Server" window, provide a name for the linked server in the "Linked server" field.  Choose "Microsoft OLE DB Provider for ODBC" for the "Provider" drop-down field.  Enter "Snowflake" DSN or the name of the DSN created in Step #2 for the "Product name" and "Data source" fields.
 
-In the navigation pane on the left of this window, the "Security" option should be selected and configured according to your desired settings.  Click "OK" to complete the creation of the linked server.
-
 ![Linked Server Settings](images/linked_server_config.png)
 
+In the navigation pane on the left of this window, the "Security" option should be selected and configured according to your desired settings.  Click "OK" to complete the creation of the linked server.
+
+![Linked Server Settings](images/linked_server_config2.png)
 
 A linked server should now appear in the "Object Explorer" and provide access to Snowflake database objects.
-
 
 ![Linked Server Settings](images/linked_server.png)
