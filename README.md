@@ -17,7 +17,7 @@ Snowflake provides for the download of their ODBC driver.  The latest version of
 
 <br/>
 
-> ***Note:*** To obtain the 32-bit ODBC driver, the latest version of this driver can be obtained from their website by clicking on this [link](https://sfc-repo.snowflakecomputing.com/odbc/win32/latest/index.html)
+> ***Note:*** To obtain the 32-bit ODBC driver, the latest version of this driver can be obtained from their website by clicking on this [link](https://sfc-repo.snowflakecomputing.com/odbc/win32/latest/index.html).
 
 <br/>
 
@@ -48,7 +48,7 @@ Navigate to the registry entry for the newly created ODBC entry using the follow
 
 <br/>
 
-> ***Note:*** For 32-bit ODBC drivers, the registry entry for the newly created ODBC entry will be found at the following path `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Nodes\ODBC\ODBC.INI\Snowflake`
+> ***Note:*** For 32-bit ODBC drivers, the registry entry for the newly created ODBC entry will be found at the following path `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Nodes\ODBC\ODBC.INI\Snowflake`.
 
 <br/>
 
