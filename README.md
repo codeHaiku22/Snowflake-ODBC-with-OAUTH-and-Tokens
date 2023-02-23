@@ -44,7 +44,8 @@ The Windows System Registry stores the System DSN along with its configuration p
 
 Navigate to the registry entry for the newly created ODBC entry using the following path: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI\Snowflake`.  Then, right-click to launch the context menu and select "New" > "String Value".  Name the new value "token" and press `Enter`.  
 
-Snowflake databases may contain incompatible datatype declarations, particularly for VARCHAR columns.  This can be alleviated by adding another entry within the Windows System Registry.  Right-click to launch the context menu and select "New" > "String Value".  Name the new value "default_varchar_size" and press `Enter`.  Double-click the newly created "default_varchar_size" entry and provide a value of "8000" in the "Value data:" field and click the "OK" button.
+Snowflake databases may contain incompatible datatype declarations, particularly for VARCHAR columns.  This can be alleviated by adding another entry within the Windows System Registry.  Right-click to launch the context menu and select "New" > "String Value".  Name the new value "default_varchar_size" and press `Enter`.  Double-click the newly created "default_varchar_size" entry and provide a value of "8000" in the "Value data:" field and click the "OK" button.  More information regarding Snowflake ODBC can be found by clicking on this [link](https://docs.snowflake.com/en/user-guide/odbc-parameters).
+
 
 ![System Registry Parameters](images/registry.png)
 
