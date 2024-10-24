@@ -1,6 +1,6 @@
 # Using OAUTH with Tokens to Connect to Snowflake via ODBC
 Deep Grewal <br/>
-dgrewal@schsa.org <br/>
+grewald@stancounty.com <br/>
 Stanislaus County <br/>
 January 27, 2023
 ***
